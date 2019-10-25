@@ -1,5 +1,7 @@
 const server = require('express')()
+require('./middleware/passport')
 require('./middleware')(server)
+require('./components')(server)
 
 const port = process.env.PORT || 8000
 
